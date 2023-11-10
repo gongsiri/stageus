@@ -1,0 +1,26 @@
+/* #box{
+    background-color: red;
+    display: inline-block;
+    width : 300px;
+}
+
+#box1{
+    background-color: orange;
+    display: inline;
+    width : 300px;
+} */
+
+#box1{
+    background-color: red;
+    height: 600px;
+    position :absolute;
+}
+#box2{
+    background-color: orange;
+    height: 600px;
+
+}
+#box3{
+    background-color: yellow;
+    height: 600px;
+}

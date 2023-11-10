@@ -1,0 +1,106 @@
+body{
+    margin:0;
+}
+header{
+    height: 80px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+#logo{
+    font-size:32px;
+    font-weight: bold;
+    margin-left: 30px;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+h1{
+    margin-left: 30px;
+}
+#my_info{
+    width:90px;
+    height: 50px;
+    margin-left:900px;
+    margin-right: 30px;
+    cursor:pointer;
+}
+#log_in{
+    width:80px;
+    height: 50px;
+    margin-left:auto;
+    margin-right: 30px;
+    cursor:pointer;
+}
+#log_out{
+    width:80px;
+    height: 50px;
+    margin-left:auto;
+    margin-right: 30px;
+    cursor:pointer;
+}
+#search_div{
+    height: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#search_bar{
+    display: flex;
+    height: 30px;
+    margin-right: 30px;
+}
+#search_btn{
+    width:40px;
+    cursor:pointer;
+}
+#search_txt{
+    width:200px;
+}
+table{
+    margin-right: auto;
+    margin-left: auto;
+    width:1000px;
+    border-top:1px solid pink;
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 1px solid pink;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    cursor:pointer;
+}
+a:hover{
+    text-decoration:underline;
+}
+#posting{
+    cursor: pointer;
+}
+.posting_title{
+    text-align: left;
+}
+.posting_writer, .posting_num, .posting_comment, .posting_recommend, .posting_date, .posting_view{
+    text-align: center;
+}
+.posting_tr:hover{
+    background-color: lightgrey;
+}
+#pagination{
+    margin-top:10px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+#posting_div{
+    margin-top: 10px;
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+}

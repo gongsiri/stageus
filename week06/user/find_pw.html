@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="find_pw.css">
+</head>
+<body>
+    <header>
+        <input type="button" id="logo" value="GONGSIL 게시판"  onClick="location.href='../../index.jsp'">
+    </header>
+    <input type="button" value="뒤로가기" id="back" onclick="history.back()">
+    <main>
+        <h1>비밀번호 찾기</h1>
+        <form action="find_pw.jsp" onsubmit="return check()">
+            <div id="id_div">
+                아이디:<input type="text" id="id" name="id_value">
+            </div>
+            <div id="email_div">
+                이메일:<input type="text" id="email" name="email_value">
+            </div>
+            <input type="submit" value="찾기"id="find">
+        </form>
+    </main>
+    <script src="find_pw.js"></script>
+</body>
+</html>

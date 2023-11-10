@@ -1,0 +1,167 @@
+body{
+    margin:0;
+}
+header{
+    height: 80px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size:32px;
+    font-weight: bold;
+    margin-left: 30px;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+main{
+    margin-top:50px;
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: red; */
+}
+.top_div{
+    border-top:3px solid pink;
+    border-left:3px solid pink;
+    border-right:3px solid pink;
+}
+.id_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid pink;
+    justify-content: space-between;
+}
+.check_text{
+    color: red;
+    font-size:small;
+    margin-right: 5px;
+    display: none;
+}
+#id{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+.pw_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:3px solid pink;
+}
+#pw{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+#pw_see{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+    background-image: url("pw_see_icon.png");
+    background-size: cover;
+    border:none;
+    cursor: pointer;
+}
+.pw_check_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:3px solid pink;
+}
+#pw_same_check{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+.email_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:3px solid pink;
+}
+#email{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+.duplication_check_btn{
+    margin-right: 20px;
+    background-color: pink;
+    border: none;
+    height: 30px;
+    cursor: pointer;
+}
+.bottom_div{
+    margin-top:20px;
+    border-top:3px solid pink;
+    border-left:3px solid pink;
+    border-right:3px solid pink;
+    /* height: 120px; */
+}
+.name_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid pink;
+}
+#name{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+.birth_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid pink;
+}
+#birth{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+.phone_div{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-bottom:3px solid pink;
+}
+#phone{
+    width: 300px;
+    margin:5px;
+    margin-left:20px;
+    height: 25px;
+    border:none;
+}
+#sign_up{
+    margin-top:20px;
+    width:100%;
+    height: 40px;
+    background-color: pink;
+    border:none;
+    cursor: pointer;
+}
+#back{
+    margin-left:30px;
+    margin-top:10px;
+    height: 40px;
+}

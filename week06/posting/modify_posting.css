@@ -1,0 +1,77 @@
+body{
+    margin:0;
+}
+header{
+    height: 80px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size:32px;
+    font-weight: bold;
+    margin-left: 30px;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+article{
+    margin-top:40px;
+    width:700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid pink;
+}
+#title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:25px;
+    width: 600px;
+    display: block;
+    height: 40px;
+}
+#posting_key{
+    border:none;
+}
+#context{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    width: 600px;
+    display: block;
+    height: 500px;
+    resize: none;
+}
+#file{
+    margin-left: 50px;
+    margin-top:20px;
+    margin-bottom:25px;
+}
+#submit_div{
+    width:700px;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+#submit{
+    width:70px;
+    height: 50px;
+    background-color: pink;
+    border: none;
+    cursor: pointer;
+}
+#write_posting{
+    margin-right: auto;
+    margin-left: auto;
+    width:700px;
+    background-color: pink;
+    text-align: center;
+}
+#back{
+    margin-left:30px;
+    margin-top:10px;
+    height: 40px;
+}

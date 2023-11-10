@@ -1,0 +1,146 @@
+body{
+    margin:0;
+}
+header{
+    height: 80px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#logo{
+    font-size:32px;
+    font-weight: bold;
+    margin-left: 30px;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+}
+main{
+    margin-top:20px;
+    width:1000px;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border:5px solid pink;
+}
+#posting_title_div{
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding-left:10px;
+    padding-right:10px;
+}
+#posting_writer_div{
+    padding-left:10px;
+    padding-right: 10px;
+    display: inline;
+}
+#posting_writer{
+    display: inline;
+}
+#posting_date_div{
+    /* background-color: aqua; */
+    display: inline-block;
+}
+#posting_view_count_div{
+    /* background-color: brown; */
+    display: inline;
+    margin-left:10px;
+}
+#posting_view_count{
+    display: inline;
+}
+#comment_top_div{
+    /* background-color: antiquewhite; */
+    display: inline;
+    margin-left:10px;
+}
+#comment_top{
+    display: inline-block;
+}
+#posting_md_div{
+    padding-top:5px;
+    padding-left:10px;
+}
+.border_line{
+    margin-top:10px;
+    border:1px solid pink;
+    margin-left:10px;
+    margin-right: 10px;
+    margin-bottom:10px;
+}
+article{
+    height:fit-content;
+    padding-left:10px;
+    padding-right: 10px;
+    /* background-color: red; */
+    padding-bottom:30px;
+}
+#posting_modify{
+    cursor: pointer;
+}
+#posting_delete{
+    cursor: pointer;
+}
+#comment_bottom_div{
+    display: inline;
+    padding:10px;
+}
+#comment_bottom{
+    display: inline;
+}
+#comment_div{
+    margin-top:5px;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+}
+p{
+    margin-left:10px;
+}
+.comment{
+    height: fit-content;
+    border-bottom:1px solid white;
+    padding:10px;
+    border-bottom:1px solid lightgrey;
+}
+.comment_wirter{
+    display: inline-block;
+}
+.comment_date{
+    display: inline-block;
+    color: lightgrey;
+}
+.comment_content{
+    padding:10px;
+    /* display: none; */
+}
+.comment_modify_input{
+    display: block;
+    width: 500px;
+    height: 40px;
+    display: none;
+}
+#comment_write{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+}
+#comment_write_txt{
+    height: 40px;
+    resize: none;
+}
+#comment_write_btn{
+    width:70px;
+}
+.comment_edit{
+    display: none;
+}
+#back{
+    margin-left:30px;
+    margin-top:10px;
+    height: 40px;
+}

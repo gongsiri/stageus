@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+    <header>
+        <input type="button" id="logo" value="GONGSIL 게시판" onclick="location.href='../../index.jsp'">
+    </header>
+    <input type="button" value="뒤로가기" id="back" onclick="history.back()">
+    <main>
+        <form action="sign_up_action.jsp" onsubmit="return check()"> <!-- submit이 진행되기 전 먼저 사전 체크를 통해 submit을 막음 -->
+            <div class="top_div">
+                <div class="id_div">
+                    <input type="text" placeholder="아이디(영문자나 숫자로 이루어진 4~20자)" id="id" onchange="id_check()" name="id_value"> <!-- onchange : 값에서 딱 뗐을 때 -->
+                    <div class="check_text" id="id_check_text">다시 입력하세요</div>
+                    <input type="button" id="id_duplication_check_btn" class="duplication_check_btn" value="중복확인" onclick="id_duplication_check()">
+                </div>
+
+                <div class="pw_div">
+                    <input type="password" placeholder="비밀번호(영문자,숫자,특수문자를 포함한 8~30자)" id="pw" onchange="pw_check()" name="pw_value">
+                    <div class="check_text" id="pw_check_text">다시 입력하세요</div>
+                </div>
+
+                <div class="pw_check_div">
+                    <input type="password" placeholder="비밀번호 확인" id="pw_same_check" onchange="pw_same()">
+                    <div class="check_text" id="pw_check_check_text">일치하지 않습니다</div>
+                </div>
+
+                <div class="email_div">
+                    <input type="text" placeholder="본인확인 이메일" id="email" onchange="email_check()" name="email_value">
+                    <div class="check_text" id="email_check_text">다시 입력하세요</div>
+                    <input type="button" id="email_duplication_check_btn" class="duplication_check_btn" value="중복확인" onclick="email_duplication_check()">
+                </div>
+            </div>
+
+            <div class="bottom_div">
+                <div class="name_div">
+                    <input type="text" placeholder="이름" id="name" onchange="name_check()"  name="name_value">
+                    <div class="check_text" id="name_check_text">다시 입력하세요</div>
+                </div>
+
+                <div class="birth_div">
+                    <input type="text" placeholder="생년월일 8자리" id="birth" onchange="birth_check()"  name="birth_value">
+                    <div class="check_text" id="birth_check_text">다시 입력하세요</div>
+                </div>
+
+                <div class="phone_div">
+                    <input type="text" placeholder="휴대전화번호(- 없이 입력)" id="phone" onchange="phone_check()"  name="phone_value">
+                    <div class="check_text" id="phone_check_text">다시 입력하세요</div>
+                </div>
+            </div>
+            
+            <input type="submit" value="가입하기" id="sign_up">
+        </form>
+    </main>
+    <script src="sign_up.js"></script>
+</body>
+</html>

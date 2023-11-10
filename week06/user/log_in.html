@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="log_in.css">
+</head>
+<body>
+    <header>
+        <input type="button" id="logo" value="GONGSIL 게시판" onclick="location.href='../../index.jsp'">
+    </header>
+    <input type="button" value="뒤로가기" id="back" onclick="history.back()">
+    <main>
+        <article>
+            <form action="log_in_action.jsp" onsubmit="return check()">
+                <input type="text" class="logintxt div" placeholder="아이디" id="id" name="id_value">
+                <input type="password" class="logintxt div" placeholder="비밀번호" id="pw" name="pw_value">
+                <input type="submit" id="loginbtn" value="로그인" class="div">
+            </form>
+            
+            <div id="log_in_bottom">
+                <input type="button" class="log_in_bottom_btn" value="비밀번호 찾기" onclick="location.href='find_pw.html'"> |
+                <input type="button" class="log_in_bottom_btn"value="아이디 찾기" onclick="location.href='find_id.html'"> |
+                <input type="button" class="log_in_bottom_btn"value="회원가입" onClick="location.href='sign_up.html'">
+            </div>
+        </article>
+    </main>
+    <script src="log_in.js"></script>
+</body>
+</html>

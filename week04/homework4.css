@@ -1,0 +1,120 @@
+body{
+    height: 100vh; /*배경사진 꽉차게*/
+    width: 100vw; /*배경사진 꽉차게*/
+    background-image: url('background_img.jpg');
+    background-size: cover; /*배경사진 꽉차게*/
+}
+header{
+    height: 50px;
+}
+#time_left{
+    display: inline;
+    font-size:40px;
+    font-weight: bold;
+    display: none;
+    color: red;
+}
+#timer{
+    display: inline;
+    font-size:40px;
+    font-weight: bold;
+    display: none;
+    color: red;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
+.puzzle_div{
+    width: 450px;
+    height: 550px;
+    margin-top:30px;
+    display: inline-block;
+    text-align: center;
+}
+#random_puzzle_div{
+    width: 450px;
+    height: 450px;
+    border:4px solid black;
+    display: inline-block;
+    display: flex;
+    flex-flow: wrap;
+    background-color: rgb(194, 127, 209);
+}
+.puzzle_tmp_div{
+    margin:0;
+    width:150px;
+    height:150px;
+}
+#puzzle_1{
+    width:70px;
+    height: 70px;
+    margin-top: 15px;
+    border-radius: 50%;
+    background-size:cover;
+    background-image: url('puzzle_icon.png');
+    color:  rgb(194, 127, 209);;
+    font-size:20px;
+    background-color: white;
+    border: 3px solid rgb(194, 127, 209);
+}
+#answer_puzzle_div{
+    width: 450px;
+    height: 450px;
+    border:4px solid black;
+    display: inline-block;
+    display: flex;
+    flex-flow: wrap;
+    background-color: rgb(194, 127, 209);
+}
+.answer_puzzle{
+    width:150px;
+    height:150px;
+}
+#puzzle_2{
+    width:70px;
+    height: 70px;
+    margin-top:15px;
+    border-radius: 50%;
+    background-size:cover;
+    background-image: url('puzzle_icon.png');
+    color:  rgb(194, 127, 209);
+    font-size:20px;
+    background-color: white;
+    border: 3px solid rgb(194, 127, 209);
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    -webkit-text-stroke: 3px black;
+    color: rgb(194, 127, 209);
+    font-size:50px;
+}
+#submit_btn{
+    width:80px;
+    height: 80px;
+    margin-left:10px;
+    display: none;
+    color:rgb(194, 127, 209);
+    border: 0;
+    font-size:20px;
+    background-size:cover;
+    background-image: url('puzzle_icon.png');
+    border-radius: 50%;
+    border: 4px solid  rgb(194, 127, 209);
+}
+#shuffle_btn{
+    width:80px;
+    height:80px;
+    display: none;
+    color:rgb(194, 127, 209);
+    border: 0;
+    font-size:20px;
+    background-size:cover;
+    background-image: url('puzzle_icon.png');
+    border-radius: 50%;
+    border: 4px solid  rgb(194, 127, 209);
+}
+

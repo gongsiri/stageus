@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="homework4.css">
+</head>
+<body>
+    <header>
+        <div id="time_left">남은 시간 :</div>
+        <div id="timer"></div>
+    </header>
+    <main>
+        <article class="puzzle_div"> <!--퍼즐 전체 & 버튼 묶음-->
+            <div id="random_puzzle_div"> <!--랜덤으로 퍼즐이 배치될 div 전체-->
+                <img src="pooh.jpg" id="puzzle_1_img"> <!--첫 화면에서 보여질 이미지-->
+            </div>
+            <button type="button" value="1" id="puzzle_1" onclick="start_event(event)">
+                1
+            </button>
+        </article>
+       
+        <article class="puzzle_div"> <!--퍼즐 전체 & 버튼 묶음-->
+            <div id="answer_puzzle_div"> <!--답을 맞출 div 전체-->
+                <img src="vi.png" id="puzzle_2_img">
+            </div>    
+            <button type="button" value="2" id="puzzle_2" onclick="start_event(event)">
+                2
+            </button>
+        </article>
+    </main>
+    <footer>
+        <h1>둘 중 플레이 할 사진을 골라주세요!</h1>
+        <button type="button" value="셔플(1)" id="shuffle_btn" onclick="shuffle_event()">
+            셔플
+        </button>
+        <button type="button" value="제출" id="submit_btn" onclick="compare_event()">
+            제출
+        </button>
+    </footer>
+    <script src="./homework4.js"></script>
+</body>
+</html>

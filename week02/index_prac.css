@@ -1,0 +1,33 @@
+.div{
+    width : 50%;
+    margin-top : 10px;
+}
+
+#logo{
+    margin-top : 200px;
+    padding-bottom : 30px;
+    width : 30%;
+}
+
+#loginbtn{
+    background-color: green;
+    height: 40px;
+}
+
+.logintxt{
+    height : 40px;
+    display: block;
+}
+
+#keep{
+    display: inline-block;
+    width :49%;
+}
+#ip{
+    display: inline-block;
+    width :49%;
+    text-align : right;
+}
+
+
+

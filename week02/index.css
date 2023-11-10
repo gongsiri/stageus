@@ -1,0 +1,18 @@
+div{
+    color : blue;
+}
+
+#text1{
+    font-size : 20px;
+    color : orange;
+}
+
+.bg{
+    background-color: red;
+    color : yellow;
+}
+
+.highlight {
+    font-weight: 600;
+    color : purple;
+}

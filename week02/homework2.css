@@ -1,0 +1,403 @@
+body{ 
+    margin: 0;
+    position: relative; /* hidden_menu의 기준점*/
+}
+
+#dark_background{ /*배경 어둡게 만들기*/
+    position: fixed; /*전체화면이 어두워지게*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경 색상과 불투명도 조절 */
+    display: none; /* 초기에는 숨김 상태 */
+    z-index: 2; /* 숨겨진메뉴보다 아래에 위치 & 헤더보다 위에 위치 */
+}
+
+button{ /*버튼들에 커서 올려놨을 때 포인터로 바뀌게*/
+    cursor: pointer; 
+}
+
+header{ /*윗부분*/
+    display: flex; 
+    justify-content: space-between; 
+    height: 60px;
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1; /*스크롤을 내릴 때 내용들이 header 위로 올라가지 말아야 함-> header가 가장 위로 올라오게 하자*/
+    background-color: white; 
+}
+
+#left{ /*메뉴 버튼&로고*/
+    height: 100%; /*헤더의 높이에 꽉 차게*/
+    display: flex; 
+    width: 200px; /*창이 줄어들 때 얘는 같이 줄어들지 않고 그대로이기 때문에 px*/
+}
+
+#menu{ /*메뉴 버튼*/
+    width:85px;
+    height: 100%;
+    padding:10px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+#menu:hover{/*메뉴 버튼 위에 마우스 올렸을 때*/
+    background-color: lightgrey;
+    border-radius : 50%;
+}
+
+#logo{ /*로고*/
+    width:115px;
+    height: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+#center{ /*가운데 부분*/
+    display: flex; /*일정한 간격을 주고 떨어뜨리고 박스에 꽉 차게 하고 싶음 & 세로로 가운데*/
+    align-items: center; /*가운데 위치*/
+    width:40%; /*창이 줄어들 때 같이 줄어들 거기 때문에 %*/
+}
+
+#search_bar{ /*검색창 박스*/
+    display: flex;
+    height: 40px; 
+    width: calc(100% - 50px); /*음성인식 버튼은 고정 크기로 같이 줄어들지 않고 검색창만 줄어들 거임, center의 넓이를 100%로 잡고 음성인식 버튼의 넓이인 40px + 마진 10p를 빼줌*/
+    display: inline-c;
+    margin-right: 10px; /*음성인식 버튼과 이만큼 떨어질 거임*/
+}
+
+#search_btn{ /*검색(돋보기)버튼*/
+    width: 40px; /*고정 크기*/
+    border-top-right-radius :25px; 
+    border-bottom-right-radius :25px;
+    border-left:none;
+    background-color: rgba(0,0,0,0);
+}
+
+#search_btn:hover{
+    background-color: lightgrey;
+}
+
+#search_txt{ /*검색창(타자 치는 곳)*/
+    width:calc(100% - 80px); /*검색버튼과 키보드는 고정 크기로 같이 줄어들지 않고 검색창(타자치는 곳)만 줄어들 거임*/
+    border-top-left-radius :25px;
+    border-bottom-left-radius :25px;
+    border-right:none;
+}
+
+#keyboard{ /*키보드 버튼*/
+    border-left:none;
+    width:40px;
+    background-color: rgba(0,0,0,0);
+}
+
+#voice_btn{ /*음성인식 버튼*/
+    height: 40px;
+    width: 40px;
+    border:none;
+    border-radius:25px;
+}
+
+#voice_btn:hover{
+    background-color: lightgrey;
+}
+
+#right{ /*오른쪽 부분*/
+    display: flex; /*박스에 꽉 차게 정렬되고 싶음 & 간격을 동일하게 주고 싶음 & 세로로 가운데*/
+    justify-content: space-between;
+    align-items: center;
+    width:150px;
+}
+
+#video{ /*비디오 버튼*/
+    border:none;
+    width:40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0);
+}
+#video:hover{
+    background-color: lightgrey;
+    border-radius : 50%;
+}
+
+#bell{ /*알림 버튼*/
+    border:none;
+    width:40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0);
+}
+
+#bell:hover{
+    background-color: lightgrey;
+    border-radius : 50%;
+}
+
+#icon{ /*계정 버튼*/
+    height: 50px; 
+    border-radius:25px; 
+    width:40px; 
+    height: 40px; 
+    overflow: hidden; /*크기를 벗어난 이미지를 가려줌*/
+    position:relative; /*img의 절대적 위치의 기준점*/
+    border:none;
+}
+
+#icon:hover{
+    background-color: lightgrey;
+    border-radius : 50%;
+}
+
+#icon_img{ /*계정 이미지*/
+    width:100%;
+    height:100%;
+    position: absolute; /*icon을 기준으로 왼쪽과 위 처음부터 시작하게...*/
+    top:0;
+    left:0;
+}
+
+main{ /*헤더 아래 부분*/
+    width: 100%;
+    position: relative;
+}
+
+nav{ /*왼쪽 메뉴 박스*/
+    position:fixed; /*스크롤 내려도 이 자리에 고정*/
+    top:60px; /*헤더의 높이만큼*/
+    width:85px;
+}
+
+.nav_btn{ /*각 메뉴 버튼*/
+    padding-top : 10px;
+    padding-bottom : 10px;
+    padding-left:0px;
+    padding-right:0px;
+    height:100px;
+    width:85px;
+    border:none;
+    background-color: rgba(0,0,0,0);
+}
+
+.nav_btn:hover{
+    background-color: lightgrey;
+    border-radius : 10px;
+}
+
+.nav_img_div{ /*메뉴 이미지*/
+    width:100%;
+    height:50px;
+}
+
+#hidden_menu{ /*숨겨진 메뉴(펼쳐질)*/
+    position:absolute; /*body 기준*/
+    top:0;
+    left:-240px; /*숨겨놓음*/
+    width:240px;
+    height:100vh; /*높이를 디스플레이의 높이에 꽉 맞게 함*/
+    /*
+    hidden_menu에 heught : 100vh를 주어 디스플레이 높이로 높이 정해줌
+    overflow:auto를 주어 높이 넘어가는 것들을 스크롤로 보여줌
+    ->100vh 안 주면 스크롤바가 메뉴 안에 안 생기고 바깥에 생김...
+    */
+    background-color: white;
+    z-index:3; /*헤더, dark_background보다 위에 와야 함*/
+    transition: 0.3s; /*슬라이드의 지속시간*/
+    /*어떠한 변형이 일어나는 동안의 상태 -> 이에 대해 시간을 지정
+    요소가 한 상태에서 다른 상태로 변형될 때 이 변화가 일정 시간동안 변천과정을 겪는 것
+    초기상태 & 종료 상태 필요
+    transiton-delay : 지연시간
+    1,000ms = 1s*/
+}
+
+#hidden_menu_top{ /*hidden 메뉴 안에서 메뉴&로고 묶음*/
+    width:240px;
+    display: flex; 
+    height:60px;
+    position: fixed; /*메뉴 스크롤 할때 안 내려가도록 고정*/
+    background-color: white;
+    z-index: 4; /*그 무엇보다도 위에 있게*/
+}
+
+#hidden_menu_bottom{ /*hidden 메뉴 안에서 메뉴들*/
+    height:calc(100vh - 70px); /*logo와 menu 부분 말고 메뉴들 부분에서만 스크롤바가 보이게*/
+    padding-top:70px; /*top의 높이만큼*/
+    width:240px;
+    text-align: center; /*버튼들 가운데 정렬*/
+    overflow: auto; /*높이를 넘어가는 것들을 스크롤로 보여줌*/
+}
+
+.hidden_menu_btn{ /*숨겨진 메뉴 각 버튼*/
+    height: 40px;
+    width: 200px;
+    padding: 5px;
+    border:none;
+    background-color: rgba(0,0,0,0);
+}
+
+.hidden_menu_btn:hover{
+    background-color: lightgrey;
+    border-radius : 10px;
+}
+
+.hidden_menu_btn_img{ /*메뉴 이미지*/
+    width: 40px;
+    height: 100%;
+    display: inline-block;
+}
+
+.hidden_menu_btn_name{ /*메뉴 제목*/
+    width: 140px;
+    height: 20px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.border_line{ /*경계선*/
+    border:1px solid black;
+    margin-top:10px;
+    margin-bottom: 10px;
+    width:90%;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+.border_txt{ /*경계를 나누는 txt*/
+    height: 40px;
+    width: 200px;
+    margin-left : auto;
+    margin-right : auto;
+    text-align: left;
+}
+
+.sub_channel_div{ /*구독하는 채널 프로필*/
+    width: 40px;
+    height: 100%;
+    overflow: hidden; /*크기를 벗어난 이미지를 가려줌*/
+    position: relative; /*img의 절대적 위치의 기준점*/
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.sub_channel_img{ /*구독하는 채널 프로필 이미지*/
+    width: 100%;
+    height: 100%;
+    position: absolute; /*icon을 기준으로 왼쪽과 위 처음부터 시작하게...*/
+    top:0;
+    left:0;
+}
+
+#menu:hover{/*메뉴 버튼 위에 마우스 올렸을 때*/
+    background-color: lightgrey;
+    border-radius : 50%;
+}
+
+section{ /*nav 옆 썸네일 있는 부분*/
+    padding-top:60px;
+    padding-left: 85px; /*nav의 넓이 만큼*/
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-wrap : wrap; /* 넘치는 거 아래로 줄바꿈*/
+}
+
+.video_div{ /*각 비디오 박스*/
+    flex-basis:300px; /*video_div에서 width:20% 말고 flex-basis:400px으로 했더니 창이 줄어들때 같이 줄어들지 않음 그리고 옆에 여백이 생김.... -> flex-grow:1 주면 됨*/
+    flex-grow: 1; /*여백을 채우게*/
+    padding:10px; 
+    height: fit-content; /*높이는 컨텐츠에 맞게*/
+    border: none;
+    background-color: rgba(0,0,0,0);
+    margin-top:10px;
+} 
+
+.thumbnail_div{ /*썸네일 사진 박스*/
+    width:100%;
+    height:56%; /*일정한 비율이 유지되며 줄어들게*/
+}
+
+.thumbnail{ /*썸네일 사진*/
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.info_div{ /*정보를 묶어줌 썸네일 아래*/
+    display: flex; 
+    flex-direction: row; /*html에서 순서가 반대로 되어 있음...*/
+    width: 100%;
+}
+
+.info_box{ /*정보 오른쪽 부분*/
+    width: 100%;
+}
+
+.channel_profile{ /*채널 프로필 사진이 들어갈 박스*/
+    width:40px;
+    padding-right: 5px;
+}
+
+.channel_img_div{ /*채널 프로필*/
+    width:40px;
+    height:40px;
+    border-radius: 100%;
+    position: relative; /*아까 계정아이콘과 동일*/
+    overflow: hidden;
+}
+
+.channel_img{ /*채널 프로필 사진*/
+    position: absolute; /*icon을 기준으로 왼쪽과 위 처음부터 시작하게...*/
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+}
+
+.title_div{ /*제목 박스*/
+    width:100%; 
+    height: 60px;
+    text-align: left;
+}
+
+.title{ /*제목*/
+    display: -webkit-box; /*유연한 높이 증가, 해당 영역을 box 형태로 관리되도록 합니다.*/
+    overflow: hidden;
+    text-overflow: ellipsis; /*넘치는 글 ...으로 표현*/
+   -webkit-line-clamp: 2; /*텍스트 라인을 2줄로 결정*/
+   -webkit-box-orient: vertical; /*영역 박스의 내의 정렬을 수직으로 하도록 합니다. 이거 안 하면 글자 아래로 삐져나옴..*/
+}
+
+.channel_name_div{ /*채널명*/
+    text-align: left;
+    height: 18px;
+    margin-top:3px;
+}
+
+.info_bottom{ /*조회수&업로드 날짜 박스*/
+    text-align: left; /*왼쪽에 붙게*/
+    margin-top:5px;
+}
+h1{ /*제목이 위에 꽉 붙게*/
+    margin-top:0;
+}
+
+/*media 쿼리들 (흐름에 따라 아래에 모아둠*/
+
+@media screen and (max-width:676px){ 
+    nav{ /*nav 사라짐*/
+        display: none;
+    }
+    section{ /*section이 사라진 nav의 넓이까지 차지*/
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width:643px) {
+    #center{ /*검색창 부분(가운데) 사라짐*/
+        display: none;
+    }
+}
+

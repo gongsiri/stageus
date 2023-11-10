@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="write_posting.css">
+</head>
+<body>
+    <header>
+        <input type="button" id="logo" value="GONGSIL 게시판"  onClick="location.href='../../index.jsp'">
+    </header>
+    <input type="button" value="뒤로가기" id="back" onclick="history.back()">
+    <main>
+        <div id="write_posting">    
+            <h1>게시글 작성</h1>
+        </div>
+        <form action="write_posting.jsp">
+            <article>
+                <input type="text" id="title" placeholder="제목을 입력해 주세요." name="title_value">
+                <textarea row="10" cols="20" id="context" placeholder="내용을 입력하세요."name="content_value"></textarea>
+            </article>
+            <div id="submit_div">
+                <input type="submit" id="submit" value="등록">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

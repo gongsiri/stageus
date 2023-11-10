@@ -1,0 +1,23 @@
+#box{
+    background-color: #ff0000;
+
+    width:70%;
+
+    height: fit-content;
+
+    margin-left : 10%;
+
+    /* padding-left : 10%; */
+
+
+    color : #000fff;
+
+    font-size : 32px;
+
+    font-weight: 600;
+    text-align : left;
+    
+    border : 1px solid black;
+    border-radius: 10px;
+    
+}

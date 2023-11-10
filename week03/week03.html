@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--한국어를 쓸 수 있게(안 쓰면 한글 깨짐)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--얘를 안 주면 media 쿼리가 적용이 안 됨, 디바이스에서 보여지는 화면 (viewport) 디바이스의 width와 똑같이 해서 1:1 비율로 하겠다-->
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1"> <!--인풋에서 가져온 값은 string-->
+    <input type="text" id="num2">
+
+    <input type="button" value="더하기" onclick="add()">
+
+    <input type="button" value="빼기" onclick="sub()">
+ 
+    <input type="button" value="곱하기" onclick="mix()">
+
+    <input type="button" value="나누기" onclick="divide()">
+
+    <input type="button" value="비교" onclick="compare()">
+    <h1 id="result_box"></h1>
+    
+    <script src="index.js"></script> <!--import, body의 가장 아래부분(위에서 아래로 읽으니까), 여러줄 가능-->
+</body>
+</html>
